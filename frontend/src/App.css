@@ -1,1 +1,48 @@
-@import "tailwindcss"
+@import "tailwindcss";
+
+@theme {
+  /* 🟢 CONFIGURACIÓN DE COLORES DE FONDO (Fieles al Octágono Nocturno) */
+  --color-background: #0D0D0E;        /* Un toque más profundo para dar más contraste */
+  --color-surface: #161618;           /* Superficie base para tarjetas y tablas */
+  --color-surface-elevated: #222224;  /* Para modales o tooltips de gráficos */
+
+  /* ⚪ TEXTO Y ACCESIBILIDAD (Ajustado contraste WCAG) */
+  --color-text-primary: #F2F2F4;     /* Más brillante para KPIs principales */
+  --color-text-secondary: #A1A1A6;   /* Ideal para etiquetas de ejes en gráficos */
+  --color-text-muted: #7E7E82;       /* Mejorado el contraste para texto pequeño */
+
+  /* 🔴 BRANDING (UFC / VeloMMA) */
+  --color-primary: #D23A11;          /* Un punto más vivo para que resalte en pantallas oscuras */
+  --color-primary-hover: #F04D22;
+  --color-primary-dim: #4A1205;      /* Ideal para fondos de botones secundarios (Ghost buttons) */
+
+  /* 🔵 ACENTOS DE DATOS */
+  --color-secondary: #0A84FF;        /* Azul eléctrico para diferenciar al "Peleador Azul" */
+  --color-secondary-hover: #409CFF;
+
+  /* 🚦 ESTADOS Y SEMÁNTICA (Métricas de pelea) */
+  --color-success: #30D158;          /* Victorias / Racha / Golpes significativos conectados */
+  --color-warning: #FF9F0A;          /* Fatiga / Alerta de sumisión */
+  --color-danger: #FF453A;           /* Derrotas / Daño recibido alto */
+  --color-info: #5AC8FA;             /* Datos generales / Estilo de pelea */
+
+  /* 📐 ESTRUCTURA Y BORDES */
+  --color-border: #2C2C2E;           /* Más sutil para no sobrecargar las tablas de datos */
+  --color-border-light: #3A3A3C;
+
+  /* 🔤 TIPOGRAFÍAS */
+  --font-family-heading: 'Montserrat', sans-serif; /* Perfecta para nombres de peleadores en mayúsculas */
+  --font-family-body: 'Open Sans', sans-serif;
+  --font-family-numbers: 'Roboto Mono', monospace;  /* Clave para las tablas de estadísticas (STRIKES, TD) */
+}
+
+*{
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  font-family: var(--font-family-body);
+  font-size: 16px;
+}
